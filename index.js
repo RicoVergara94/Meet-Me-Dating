@@ -15,3 +15,35 @@ let imageArray = [
   // "images/Chino.png",
   "images/Tokio.jpeg",
 ];
+
+var femaleBox = document.getElementById("female-box");
+var maleBox = document.getElementById("male-box");
+var button = document.getElementById("date-btn");
+
+maleBox.src = "images/Riza.png";
+maleBox.style.width = "400px";
+maleBox.style.height = "400px";
+femaleBox.src = "images/Lin.png";
+femaleBox.style.width = "400px";
+femaleBox.style.height = "400px";
+let currentImage = "";
+
+function changeImage() {
+  //   document.getElementById("instructions").style.display = "none";
+  let index = Math.floor(Math.random() * imageArray.length);
+  let srcImage = imageArray[index];
+  while (srcImage == currentImage) {
+    index = Math.floor(Math.random() * imageArray.length);
+    srcImage = imageArray[index];
+  }
+  //   document.getElementById("myImageId").src = srcImage;
+  currentImage = srcImage;
+  return srcImage;
+}
+
+button.addEventListener("click", () => {
+  // document.getElementById("loader").style.display = "block";
+  maleBox.src = changeImage();
+  femaleBox.src = changeImage();
+  console.log("hello world");
+});

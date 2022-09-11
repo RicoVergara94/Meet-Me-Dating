@@ -1,0 +1,73 @@
+body {
+  background-attachment: fixed;
+  height: 100%;
+  background: radial-gradient(purple, white);
+}
+#image-pair {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#heart {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#btn-container {
+  margin-top: 10px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#date-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#inputQuestion {
+  width: 300%;
+  height: 50%;
+  font-size: 40px;
+}
+#inputQuestion,
+#button {
+  display: inline-block;
+}
+
+/* #secondDiv {
+  color: black;
+} */
+#container {
+  float: left;
+  width: 25%;
+  height: 280px;
+}
+#answer {
+  float: right;
+  width: 30%;
+  height: 280px;
+  font-size: 50px;
+}
+#loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
